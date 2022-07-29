@@ -156,11 +156,11 @@
 				6389B8122892C5A8003869F3 /* uploadViewController.swift */,
 				6389B8142892CEC1003869F3 /* selectPlaceViewController.swift */,
 				6389B8162892D26F003869F3 /* detailViewController.swift */,
+				6316C9C22893B6FF00282B44 /* PlaceModel.swift */,
 				636AEA35288FD85100838623 /* Main.storyboard */,
 				636AEA38288FD85400838623 /* Assets.xcassets */,
 				636AEA3A288FD85400838623 /* LaunchScreen.storyboard */,
 				636AEA3D288FD85400838623 /* Info.plist */,
-				6316C9C22893B6FF00282B44 /* PlaceModel.swift */,
 			);
 			path = FoursquareClone;
 			sourceTree = "<group>";

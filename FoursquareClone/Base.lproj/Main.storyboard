@@ -94,6 +94,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="AOo-LW-QJS"/>
+                    <connections>
+                        <segue destination="2qM-NQ-uhC" kind="presentation" identifier="toFeedVC" modalPresentationStyle="fullScreen" id="hoY-H9-fbf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ptO-N7-0rE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,6 +141,9 @@
             <point key="canvasLocation" x="3413.04347826087" y="58.928571428571423"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hoY-H9-fbf"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

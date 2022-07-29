@@ -13,8 +13,6 @@ class selectPlaceViewController: UIViewController, MKMapViewDelegate, CLLocation
     
     let mapView = MKMapView()
     var locationManager = CLLocationManager()
-    var chosenLatitude = Double()
-    var chosenLongitude = Double()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,8 +56,8 @@ class selectPlaceViewController: UIViewController, MKMapViewDelegate, CLLocation
             
             self.mapView.addAnnotation(annatation)
             
-            self.chosenLatitude = coordinates.latitude
-            self.chosenLongitude = coordinates.longitude
+            PlaceModel.sharedInstance.latitude = coordinates.latitude
+            PlaceModel.sharedInstance.longitude = coordinates.longitude
         }
         
     }
@@ -75,6 +73,42 @@ class selectPlaceViewController: UIViewController, MKMapViewDelegate, CLLocation
     }
     
     @objc func saveClick(){
+        
+        let object = PFObject(className: "Places")
+        object["name"] = PlaceModel.sharedInstance.placeName
+        object["type"] = PlaceModel.sharedInstance.placeType
+        object["atmoshere"] = PlaceModel.sharedInstance.placeAtmoshere
+        object["latitude"] = PlaceModel.sharedInstance.latitude
+        object["longitude"] = PlaceModel.sharedInstance.longitude
+        
+        if let imageData = PlaceModel.sharedInstance.placeImage.jpegData(compressionQuality: 0.5){
+            
+            object["image"] = PFFileObject(data: imageData)
+            
+        }
+        
+        object.saveInBackground { succed, error in
+            
+            if error != nil {
+                
+                self.alert(alertTitle: "Error!", alertMessage: error?.localizedDescription ?? "Error!")
+                
+            }else{
+                
+                self.performSegue(withIdentifier: "toFeedVC", sender: self)
+                
+            }
+            
+        }
+        
+    }
+    
+    func alert(alertTitle : String, alertMessage : String){
+        
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
         
     }
     
