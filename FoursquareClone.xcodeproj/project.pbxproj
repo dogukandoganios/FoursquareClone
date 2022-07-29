@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10A48182A20AB9A990F43360 /* Pods_FoursquareClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9FFEDE880440EB63FD2AB3 /* Pods_FoursquareClone.framework */; };
 		534DF834FDD36E41803809C4 /* Pods_FoursquareCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD1D233484591CED8AFB9FC /* Pods_FoursquareCloneTests.framework */; };
+		6316C9C32893B6FF00282B44 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316C9C22893B6FF00282B44 /* PlaceModel.swift */; };
 		636AEA30288FD85100838623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AEA2F288FD85100838623 /* AppDelegate.swift */; };
 		636AEA32288FD85100838623 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AEA31288FD85100838623 /* SceneDelegate.swift */; };
 		636AEA34288FD85100838623 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AEA33288FD85100838623 /* SignUpViewController.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		5CD1D233484591CED8AFB9FC /* Pods_FoursquareCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquareCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6316C9C22893B6FF00282B44 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		636AEA2C288FD85100838623 /* FoursquareClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquareClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		636AEA2F288FD85100838623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		636AEA31288FD85100838623 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				636AEA38288FD85400838623 /* Assets.xcassets */,
 				636AEA3A288FD85400838623 /* LaunchScreen.storyboard */,
 				636AEA3D288FD85400838623 /* Info.plist */,
+				6316C9C22893B6FF00282B44 /* PlaceModel.swift */,
 			);
 			path = FoursquareClone;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				636AEA34288FD85100838623 /* SignUpViewController.swift in Sources */,
+				6316C9C32893B6FF00282B44 /* PlaceModel.swift in Sources */,
 				636AEA30288FD85100838623 /* AppDelegate.swift in Sources */,
 				6389B8132892C5A8003869F3 /* uploadViewController.swift in Sources */,
 				6389B8112892BEE7003869F3 /* feedViewController.swift in Sources */,
